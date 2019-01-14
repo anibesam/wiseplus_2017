@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- AUTHOR: Wiseplus Developers Team
+     LEAD DEVELOPER: Peter Samuel Anibe
+     CopyRights: 2019 Wiseplus Ineventions Limited  
+     
+     
+     
+WWW                WWW  III   SSSSSSSSSSSSSSSSS EEEEEEE   EEEEEEEEE LL      U      U     SSSSSSSSSSS
+WWW                WWW  III   SSS               EE        EE      E LL      U      U    SS
+WWW     WWWWWW     WWW  III       BSSSSSSSS     EE        EEEEEEEE  LL      U      U      SSSSSSSS
+WWW    W      W    WWW  III              SS     EEEEEEE   EE        LL      U      U           SS
+WWW   W        W   WWW  III            SS       EE        EE        LL      U      U          SS
+WWWWWW           WWWWW  III  SSSSSSSSSSS        EEEEEEE   EE        LLLLLL  UUUUUUUU   SSSSSSSS
+     
+     
+     
+     -->
+
+
+<!-- HEAD SECTION BEGINS -->
+
+<head>
+    <meta charset="utf-8">
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <title>Wiseplus - Making a Generational Difference with Technology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Web development, Software Development, Mobile App Development, Young Developers Hub,
+    Networking," />
+    <!-- STYLE BEGINS -->
+    <link rel="stylesheet" href="css/anibeui-plus.css" media="screen">
+
+    <link rel="stylesheet" href="css/anibe-ui.css" media="screen">
+    <!-- Social Share Kit CSS -->
+    <link rel="stylesheet" href="css/social-share-kit.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css" media="all">
+
+
+    <link rel="stylesheet" href="css/font-awesome.css" media="all">
+
+    <!-- STYLE ENDS -->
+    <!-- URL BAR SCRIPT -->
+    <script type="application/x-javascript">
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- SCRIPTS ENDS -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--  HEAD SECTION ENDS -->
+</head>
+<!-- BODY SECTION BEGINS -->
+
+<body>
+    <!-- #region Jssor Slider Begin -->
+    <script src="js/jssor.slider.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        jssor_1_slider_init = function() {
+            var jssor_1_options = {
+                $AutoPlay: 1,
+                $SlideDuration: 800,
+                $SlideEasing: $Jease$.$OutQuint,
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$
+                },
+                $BulletNavigatorOptions: {
+                    $Class: $JssorBulletNavigator$
+                }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*responsive code begin*/
+            /*you can remove responsive code if you don't want the slider scales while window resizing*/
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 1920);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                } else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*responsive code end*/
+        };
+    </script>
+
+    <style>
+        /* jssor slider loading skin oval css */
+        
+        .jssorl-oval img {
+            animation-name: jssorl-oval;
+            animation-duration: 1.2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        
+        @keyframes jssorl-oval {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        /* jssor slider bullet navigator skin 05 css */
+        /*
+        .jssorb05 div           (normal)
+        .jssorb05 div:hover     (normal mouseover)
+        .jssorb05 .av           (active)
+        .jssorb05 .av:hover     (active mouseover)
+        .jssorb05 .dn           (mousedown)
+        */
+        
+        .jssorb05 {
+            position: absolute;
+        }
+        
+        .jssorb05 div,
+        .jssorb05 div:hover,
+        .jssorb05 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 16px;
+            height: 16px;
+            background: url('images/b10.png') no-repeat;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .jssorb05 div {
+            background-position: -7px -7px;
+        }
+        
+        .jssorb05 div:hover,
+        .jssorb05 .av:hover {
+            background-position: -37px -7px;
+        }
+        
+        .jssorb05 .av {
+            background-position: -67px -7px;
+        }
+        
+        .jssorb05 .dn,
+        .jssorb05 .dn:hover {
+            background-position: -97px -7px;
+        }
+        /* jssor slider arrow navigator skin 22 css */
+        /*
+        .jssora22l                  (normal)
+        .jssora22r                  (normal)
+        .jssora22l:hover            (normal mouseover)
+        .jssora22r:hover            (normal mouseover)
+        .jssora22l.jssora22ldn      (mousedown)
+        .jssora22r.jssora22rdn      (mousedown)
+        .jssora22l.jssora22lds      (disabled)
+        .jssora22r.jssora22rds      (disabled)
+        */
+        
+        .jssora22l,
+        .jssora22r {
+           
+        }
+        
+        .jssora22l {
+            background-position: -10px -31px;
+        }
+        
+        .jssora22r {
+            background-position: -70px -31px;
+        }
+        
+        .jssora22l:hover {
+            background-position: -130px -31px;
+        }
+        
+        .jssora22r:hover {
+            background-position: -190px -31px;
+        }
+        
+        .jssora22l.jssora22ldn {
+            background-position: -250px -31px;
+        }
+        
+        .jssora22r.jssora22rdn {
+            background-position: -310px -31px;
+        }
+        
+        .jssora22l.jssora22lds {
+            background-position: -10px -31px;
+            opacity: .3;
+            pointer-events: none;
+        }
+        
+        .jssora22r.jssora22rds {
+            background-position: -70px -31px;
+            opacity: .3;
+            pointer-events: none;
+        }
+    </style>
+<header>
+  <div>
+    <!-- NAVIGATION BAR BEGINS -->
+    <div class="header">
+        <!-- HEADER DIV BEGINS-->
+        <div class=" navbar navbar-toggleable-md fixed-top navbar-inverse">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <center>
+                <a href="index.html" class="navbar-brand"><img src="images/logo.png" height="50px" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </center>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="container">
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+
+                    <ul class="nav navbar-nav anibe-auto">
+                       <li class="nav-item">
+        <a class="nav-link" href="#">Ideas</a>
+      </li>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <li class="nav-item">
+        <a class="nav-link" href="#">Our Team</a>
+      </li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <li class="nav-item">
+        <a class="nav-link" href="#">What We Do</a>
+      </li>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             
+   <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li class="nav-item">
+        <a class="nav-link" href="#">Contact Us</a>
+      </li>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Header Class Div Ends -->
+        <br/><br/><br/><br/>
+    </div>
+
+        <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;
+    width:1500px;height:600px;overflow:hidden;visibility:hidden;">
+            <!-- Loading Screen -->
+            <div data-u="loading" class="jssorl-oval" style="position:absolute;
+        top:0px;left:0px;text-align:center;background-color:rgba(0,0,0,0.7);">
+                <img style="margin-top:-19.0px;position:relative;top:70%;
+            width:38px;height:78px;" src="images/oval.svg" />
+            </div>
+            <div data-u="slides" style="cursor:default;position:relative;top:0px;
+        left:0px;width:1500px;height:600px;overflow:hidden;">
+                <div>
+                    <img data-u="image" src="images/about.jpg" />
+                    <div style="position: absolute; top: 40%; left: 35px;
+                 width: 60%; height: 30%;text-align:right;
+                 line-height:40%;">
+                      <h2 align="center" class="animated bounce" style="color:white;">
+                            <blockquote> <b style="font-size:150%;">
+                                Ideas, Innovations, and Inventions
+
+                            </b>
+                            </blockquote>
+                        </h2>
+                    </div>
+                </div>
+                <div>
+                    <img data-u="image" src="images/b3.jpg" />
+
+                    <div style="position: absolute; top: 40%; left: 35px;
+                 width: 60%; height: 30%;text-align:right;
+                 line-height:40%;">
+                        <h1 align="center" class="animated bounce" style="color:white;">
+                            <blockquote> <b style="font-size:150%;">We are on the journey of making a generational
+                             difference with technology</b>
+                            </blockquote>
+                        </h1>
+                    </div>
+                </div>
+                <div>
+                    <img data-u="image" src="images/anibe1.png" />
+                    <div style="position: absolute; top: 40%; left: 5px;
+                 width: 50%; height: 30%;text-align:left;
+                 line-height:40%;">
+                        <h1 align="center" class="animated bounce" style="color:#ffffff">
+                            <blockquote>
+                                <b style="font-size:150%; font-family:'Adobe Garamond Pro';">
+                             FOUNDATION 
+                            </b>
+                                <blockquote style="font-size:30px; font-family:'Segoe Script'; color:white; font-style:bold;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Wiseplus is built on the foundation of innovative visionaries and futurist thinkers.
+
+                                </blockquote>
+
+                            </blockquote>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <!-- Bullet Navigator -->
+            <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+                <!-- bullet navigator item prototype -->
+                <div data-u="prototype" style="width:16px;height:16px;"></div>
+            </div>
+            <!-- Arrow Navigator -->
+            <span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span>
+            <span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span>
+        </div>
+        <script type="text/javascript">
+            jssor_1_slider_init();
+        </script>
+        <!-- #endregion Jssor Slider End -->
+    
+</li>
+</li>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+
+
+ <div align="center">
+        <div class="jumbotron specialjum">
+            <div class="over container body-content">
+                <h1 style="width:80%; font-style:bold;"><b style="font-size:55px;">Hello, We are <font color="#888d19">Wiseplus</font></b></h1>
+                <p class="animated bounce" align="center" style="width:80%; font-family: SamsungSansSharp; font-size:24px;">We build innovative technology tools for companies and individuals.
+                </p>
+            </div>
+        </div>
+    </div>
+
+<!-- SERVICES BEGINS -->
+
+
+<div class="container">
+ <h1 align="center" style="font-size:30px; font-family:SamsungSansSharp ;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size:30px;"> WHAT WE DO</b></h1>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+                <div class="card">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<center><img align="center" src="images/anibesoftware.png" width="170px" height="100px"></center>
+               <b style="font-size:15px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom Software Development</b>
+                    <div class="card-block">
+                        <h4 style="font-family: SamsungSansSharp;">Whether you are a start-up or an established business, we are ready to assist you at every stage of the software development life cycle — from conceptualization and consulting to development and support.</h4>
+                    </div>
+                </div>
+            </div>
+
+            
+             <div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+                <div class="card">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<center><img align="center" src="images/anibeglobe.png" width="170px" height="100px"></center>
+                <b style="font-size:15px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web Application Development</b>
+                    <div class="card-block">
+                        <h4 style="font-family: SamsungSansSharp;">Our software engineers have a wealth of experience in building web applications. We are also experts in many verticals and business domains, including e-Commerce, e-Learning, AdTech, Finance, Entertainment, and more.</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+                <div class="card">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<center><img align="center" src="images/anibemobile.png" width="170px" height="100px"></center>
+                <b style="font-size:15px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspMobile Application Development</b>
+                    <div class="card-block">
+                        <h4 style="font-family: SamsungSansSharp;">We develop powerful, highly usable mobile apps that solve business problems, attract users, and reinforce your brand. We build native, hybrid, and cross-platform apps that run on all major operating systems such as iOS and Android.</h4>
+                    </div>
+                </div>
+            </div>
+             <!-- END HERE -->
+        </div>
+       </div>
+<br/> <br/>
+
+    <!-- SERVICES ENDS -->
+
+<!-- SECTION BEGINS -->
+   
+    <!--footer start from here-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 footer-col">
+                    <h4 class="heading7">ABOUT WISEPLUS</h4>
+                    <ul class="footer-ul">
+                        <li><a href="#">Vision</a></li>
+                        <li><a href="#"> What We Believe</a></li>
+                        <li><a href="#"> Mission</a></li>
+                        
+                        
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 footer-col">
+                    <h4 class="heading7">SERVICES</h4>
+                    <ul class="footer-ul">
+                        <li><a href="#">Web devlopment</a></li>
+                        <li><a href="#"> Security and Pentesting</a></li>
+                        <li><a href="#">Software Solutions</a></li>
+                        <li><a href="#">Mobile Application Development</a></li>
+                    </ul>
+                </div>
+            <div class="col-md-3 col-sm-6 footer-col">
+                    <h4 class="heading7">IDEAS</h4>
+                    <ul class="footer-ul">
+                        <li><a href="#">Blog </a></li>
+                        <li><a href="#">Wiseplus Bootcamp</a></li>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#"> People</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 footer-col">
+                   <ul class="footer-social">
+                        <div class="ssk-group ssk-count">
+                            <a href="http://wwww.fb.me/wiseplusinventions" class="ssk ssk-instagram"></a>
+                            <a href="http://www.twitter.com/farodizy" class="ssk ssk-twitter"></a>
+                            <a href="" class="ssk ssk-facebook"></a>
+                            <a href="" class="ssk ssk-youtube"></a>
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- copyright  footer by Anibe Sam-->
+        
+        <!-- //copyright -->
+    </footer>
+    <div class="anibe-footer">
+            <div class="container">
+            <ul>
+                <li align="right" style="font-size:40%;" class="float-lg-right"><a href="#top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-up" aria-hidden="true">TOP</i></a></li>
+            </ul>
+           
+            
+
+                <p>&copy; 2019 Wiseplus Inventions Limited. All rights reserved</p>
+
+            </div>
+        </div>
+    <!-- NAVIGATION BAR ENDS -->
+    <!-- SCRIPTS BEGINS -->
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".nav li").removeClass("active"); //this will remove the active class from  
+            //previously active menu item 
+            $('#home').addClass('active');
+            //for demo
+            //$('#demo').addClass('active');
+            //for sale 
+            //$('#sale').addClass('active');
+        });
+    </script>
+
+    
+
+
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/social-share-kit.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/anibescript.js"></script>
+    <script src="js/anibecustom.js"></script>
+</body>
+
+</html>
